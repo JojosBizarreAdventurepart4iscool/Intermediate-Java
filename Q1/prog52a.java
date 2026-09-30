@@ -13,5 +13,10 @@ System.out.println(area + " is the area");
 System.out.println(perimeter + " is the perimeter");
 input.close();
     }
-    
+//Enter length 
+//5
+//Enter Width 
+//10
+//50 is the area
+//30 is the perimeter
 }

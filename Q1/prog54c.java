@@ -13,7 +13,9 @@ public class prog54c {
 
         System.out.printf("Area: %.3f\n", area);
         System.out.printf("Circumefrence: %.3f\n", circumefrence);
-
-        input.close();
+//Enter radius 3.172
+//Area: 31.609
+//Circumefrence: 19.930 
+input.close();
     }
 }
