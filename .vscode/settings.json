@@ -1,5 +1,8 @@
 {
     "chat.disableAIFeatures": true,
-    "java.project.sourcePaths": ["./src"],
+    "java.project.sourcePaths": [
+        "src",
+        "Q1"
+    ],
     "java.project.outputPath": "./out"
 }
