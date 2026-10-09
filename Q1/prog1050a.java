@@ -113,6 +113,7 @@ public class prog1050a {
     public static int computeHighPriotrityLateSales(List<salesRecord> records){
         int count = 0;
         var dateFormat = new SimpleDateFormat("M/d/yyyy");
+        dateFormat.setTimeZone(TimeZone.getTimeZone("America/Chicago"));
         for (var record : records){
             if(record.fields[4].equalsIgnoreCase("H")){
                 try{
