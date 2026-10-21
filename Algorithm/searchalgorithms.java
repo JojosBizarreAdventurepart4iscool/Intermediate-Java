@@ -10,23 +10,17 @@ public class searchalgorithms {
     }
 
     public static <T extends Comparable<T>> int binarySearch(T[] arr, T target) {
-        public class modFib {
-            public static void main(String[] args) {
-
-            }
-
-            public static int modFibonacci(int in) {
-                if (in == 1) {
-                    return 3;
-                } else if (in == 2) {
-                    return 5;
-                } else if (in == 3) {
-                    return 8;
-                } else {
-                    return (modFibonacci(in - 1) + modFibonacci(in - 2) + modFibonacci(in - 3));
-                }
-            }
+        int left = 0, right = n - 1;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            if (array[mid] == key)
+                return mid;
+            else if (array[mid] > key)
+                right = mid - 1;
+            else
+                left = mid + 1;
         }
+        return -1;
     }
 
     public static <T extends Comparable<T>> int binarySearchRecursive(T[] arr, T target) {
