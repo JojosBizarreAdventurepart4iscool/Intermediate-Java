@@ -145,7 +145,7 @@ public class prog1050a {
         return highestCountry;
     }
 
-    public static string computeMaxByField(List<salesRecord> records, int fIndex, String ItemType, int resultFIndex){
+    public static String computeMaxByField(List<salesRecord> records, int fIndex, String ItemType, int resultFIndex){
     String topRegion = "none";
     int maxcount = 0;     
     var regions = new ArrayList<String>();
