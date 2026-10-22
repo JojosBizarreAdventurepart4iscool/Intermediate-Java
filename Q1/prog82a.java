@@ -1,3 +1,4 @@
+package Q1;
 import java.util.Scanner;
 public class prog82a {
     static class CL82a {

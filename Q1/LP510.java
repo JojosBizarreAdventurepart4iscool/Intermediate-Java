@@ -1,3 +1,4 @@
+package Q1;
 import java.util.Scanner;
 public class LP510{
     public static void main(String [] args){

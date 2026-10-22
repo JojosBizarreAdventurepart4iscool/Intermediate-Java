@@ -1,8 +1,8 @@
+package Q1;
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.ArrayList;
-import Algorithms.searchalgorithms;
 
 public class prog460a {
     public static void main(String[] args) {

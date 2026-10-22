@@ -1,21 +1,22 @@
+package Q1;
+
 public class searchalgorithms {
     public static <T extends Comparable<T>> int linearSearch(T[] arr, T target) {
         for (int x = 0; x < arr.length; x++) {
             if (arr[x].compareTo(target) == 0) {
                 return x;
-            } else {
-                return -1;
-            }
         }
-    }
+    }return -1;
+}
 
-    public static <T extends Comparable<T>> int binarySearch(T[] arr, T target) {
-        int left = 0, right = n - 1;
+    public static <T extends Comparable<T>> int binarySearch( T[] arr, T key) {
+        int left = 0;
+        int right = arr.length - 1;
         while (left <= right) {
             int mid = (left + right) / 2;
-            if (array[mid] == key)
+            if (arr[mid] == key)
                 return mid;
-            else if (array[mid] > key)
+            else if (arr[mid].compareTo(key) > 0)
                 right = mid - 1;
             else
                 left = mid + 1;
@@ -24,9 +25,8 @@ public class searchalgorithms {
     }
 
     public static <T extends Comparable<T>> int binarySearchRecursive(T[] arr, T target) {
-        return binarySearch(arr, target, 0, arr.length);
+        return binarySearchRecursive(arr, target, 0, arr.length);
     }
-}
 
 public static <T extends Comparable<T>> int binarySearchRecursive(T[] arr, T target, int low, int high) {
     if (low > high) {
@@ -36,8 +36,9 @@ public static <T extends Comparable<T>> int binarySearchRecursive(T[] arr, T tar
     if (arr[mid].compareTo(target) == 0) {
         return mid;
     } else if (arr[mid].compareTo(target) > 0) { // search right half (arr[mid] < target)
-        binarySearchRecursive(arr, target, mid + 1, high);
+        return binarySearchRecursive(arr, target, mid + 1, high);
     } else { // search left half (arr[mid] > target)
-        binarySearchRecursive(arr, target, low, mid - 1);
+       return binarySearchRecursive(arr, target, low, mid - 1);
     }
+}
 }

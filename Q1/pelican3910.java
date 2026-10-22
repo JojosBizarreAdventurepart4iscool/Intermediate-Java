@@ -1,3 +1,4 @@
+package Q1;
 import java.util.*;
 import java.io.*;
 public class pelican3910 {
