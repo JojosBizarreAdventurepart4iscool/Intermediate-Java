@@ -1,4 +1,5 @@
 package Q1;
+import java.util.ArrayList;
 
 public class DynamicArrayLab {
     public static void main(String[] args) {
@@ -23,9 +24,33 @@ public class DynamicArrayLab {
 
         }
         end = System.nanoTime();
-        System.out.println("Dynamic Array Sort: " + (end-start)/1e6 + "ms" );
+        System.out.println("Dynamic Array remove: " + (end-start)/1e6 + "ms" );
 
         //TODO: ArrayLists 20 minute mark on lecture 10
         //sort with ":arraylist.sort(null);"
+
+        System.out.println();
+        System.out.println("-----Array Lists-----");
+        var ArrayL = new ArrayList<Integer>();
+        long start2 = System.nanoTime();
+        for(int x = 0; x < 100_000; x++){
+            ArrayL.add((int)Math.random() * 100_000);
+        }
+        long end2 = System.nanoTime();
+        System.out.println("Array List Add: " + (end2-start2)/1e6 + "ms" );
+
+        start2 = System.nanoTime();
+        ArrayL.sort(null);
+        end2 = System.nanoTime();
+        System.out.println("Array List Sort: " + (end2-start2)/1e6 + "ms" );
+
+         start2 = System.nanoTime();
+        for(int x = 0; x < 100_000; x++){
+            ArrayL.remove(0);
+
+        }
+        end2 = System.nanoTime();
+        System.out.println("Array List Remove: " + (end2-start2)/1e6 + "ms" );
+
     }
 }
