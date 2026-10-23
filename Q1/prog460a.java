@@ -26,7 +26,7 @@ public class prog460a {
                 System.out.println(pos == -1 ? "Your number isn't in the list\n" : "Your number occurs at index" + (pos+1) + "\n");
             }while(num != 1);
             file.close();
-
+            input.close();
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
         }
