@@ -35,11 +35,31 @@ for( int x = 1; x < n; x++){
 }
 }
 public static <T extends Comparable<T>> void selectionSort(T arr[]){
-    //TO DO
+   // for(int x = 1; x < arr.length; x++){
+     //   int key = arr[x];
+       // int j = x-1;
+        //while(j >= 0 && arr[j] > key){
+          //  arr[j+1] = a[j];
+           // j = j-1;
+        //}
+        //a[j+1] = key;
+   // }
 }
 
 public static <T extends Comparable<T>> void shellSort(T arr[]){
-    //To DO
+  // int gap = arr.length/2;
+   //while(gap > 0){
+    //for(int x = gap ; x < arr.length; x++){
+      //  int t = arr[x];
+        //int j = x;
+        //while(j>= gap && arr[j-gap] > t){
+          //  a[j] = a[j-gap];
+           // j = j -gap;
+       // }
+        //a[j] = t;
+   // }
+    //gap = gap-2;
+   //}
 }
 }
 

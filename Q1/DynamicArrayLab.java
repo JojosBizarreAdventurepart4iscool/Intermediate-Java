@@ -26,8 +26,6 @@ public class DynamicArrayLab {
         end = System.nanoTime();
         System.out.println("Dynamic Array remove: " + (end-start)/1e6 + "ms" );
 
-        //TODO: ArrayLists 20 minute mark on lecture 10
-        //sort with ":arraylist.sort(null);"
 
         System.out.println();
         System.out.println("-----Array Lists-----");
