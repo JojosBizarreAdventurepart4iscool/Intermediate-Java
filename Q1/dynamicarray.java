@@ -1,4 +1,4 @@
-package Q1;
+
 import java.util.*;
 @SuppressWarnings({"unchecked", "unused", "rawTypes"})
 public class dynamicarray<T extends Comparable<T>> implements Iterable<T>{

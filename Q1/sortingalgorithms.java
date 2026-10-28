@@ -1,65 +1,71 @@
 package Q1;
+
 import java.util.Arrays;
 import java.util.Random;
 
-@SuppressWarnings({"unchecked, unused, ManualArrayCopy"})
-public class sortingalgorithms{
-public static <T extends Comparable<T>> void swap(T[] arr, int i , int j){
-    T temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-}
-
-public static <T extends Comparable<T>> void bubbleSort(T[] arr){
-for (int x = 0; x  < arr.length-1; x++ ){
- for(int y = 0; y < arr.length-x-1; y++){
-    if(arr[y].compareTo(arr[y+1]) > 0){
-    swap(arr,y,y+1);
+@SuppressWarnings({ "unchecked, unused, ManualArrayCopy" })
+public class sortingalgorithms {
+    public static <T extends Comparable<T>> void swap(T[] arr, int i, int j) {
+        T temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
- }
 
-}
-}
+    public static <T extends Comparable<T>> void bubbleSort(T[] arr) {
+        for (int x = 0; x < arr.length - 1; x++) {
+            for (int y = 0; y < arr.length - x - 1; y++) {
+                if (arr[y].compareTo(arr[y + 1]) > 0) {
+                    swap(arr, y, y + 1);
+                }
+            }
 
-public static <T extends Comparable<T>> void insertionSort(T[] arr){insertionSort(arr,arr.length);}
-public static <T extends Comparable<T>> void insertionSort(T[] arr, int n){
-for( int x = 1; x < n; x++){
-    T key =arr[x];
-    int y = x-1;
-    while( y >= 0 && arr[y].compareTo(key) > 0){
-        arr[y+1] = arr[y];
-        y--;
+        }
     }
-    arr[y+1] = key;
 
-}
-}
-public static <T extends Comparable<T>> void selectionSort(T arr[]){
-   // for(int x = 1; x < arr.length; x++){
-     //   int key = arr[x];
-       // int j = x-1;
-        //while(j >= 0 && arr[j] > key){
-          //  arr[j+1] = a[j];
-           // j = j-1;
-        //}
-        //a[j+1] = key;
-   // }
-}
+    public static <T extends Comparable<T>> void insertionSort(T[] arr) {
+        insertionSort(arr, arr.length);
+    }
 
-public static <T extends Comparable<T>> void shellSort(T arr[]){
-  // int gap = arr.length/2;
-   //while(gap > 0){
-    //for(int x = gap ; x < arr.length; x++){
-      //  int t = arr[x];
-        //int j = x;
-        //while(j>= gap && arr[j-gap] > t){
-          //  a[j] = a[j-gap];
-           // j = j -gap;
-       // }
-        //a[j] = t;
-   // }
-    //gap = gap-2;
-   //}
-}
-}
+    public static <T extends Comparable<T>> void insertionSort(T[] arr, int n) {
+        for (int x = 1; x < n; x++) {
+            T key = arr[x];
+            int y = x - 1;
+            while (y >= 0 && arr[y].compareTo(key) > 0) {
+                arr[y + 1] = arr[y];
+                y--;
+            }
+            arr[y + 1] = key;
 
+        }
+    }
+
+    public static <T extends Comparable<T>> void selectionSort(T arr[]) {
+        for (int x = 0; x < arr.length; x++) {
+            int minIndex = x;
+            for (int j = x + 1; j < arr.length; j++) {
+                if (arr[j].compareTo(arr[minIndex]) < 0) {
+                    minIndex = j;
+                }
+            }
+            T temp = arr[x];
+            arr[x] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
+    }
+
+    public static <T extends Comparable<T>> void shellSort(T arr[]) {
+        int gap = arr.length / 2;
+        while (gap > 0) {
+            for (int x = gap; x < arr.length; x++) {
+                T t = arr[x];
+                int j = x;
+                while (j >= gap && arr[j - gap].compareTo(t) > 0) {
+                    arr[j] = arr[j - gap];
+                    j = j - gap;
+                }
+                arr[j] = t;
+            }
+            gap = gap - 2;
+        }
+    }
+}
