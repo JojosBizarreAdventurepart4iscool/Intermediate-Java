@@ -13,6 +13,7 @@ public class intlinkedlists implements Iterable<Integer> {
     }
 
     private Node head; // root of the list
+    private Node tail;
 
     public intlinkedlists() {
         head = null;
@@ -43,6 +44,7 @@ public class intlinkedlists implements Iterable<Integer> {
             System.out.print(current.data + " ");
             current = current.next;
         }
+        System.out.println(current.data);
         System.out.println();
     }
 
@@ -188,9 +190,21 @@ public class intlinkedlists implements Iterable<Integer> {
         }
         return current.data;
     }
-    //help
+
     public void getReverse() {
         Node current = head;
+        Node temp = head.next;
+        Node temp2 = temp.next;
+        current.next = null;
+        while(temp2 != null){
+            temp.next = current;
+            current = temp;
+            temp = temp2;
+            temp2 = temp2.next;
+            System.out.print(" ");
+        }
+        head = temp;
+
     }
 
     public double avg() {
@@ -200,6 +214,7 @@ public class intlinkedlists implements Iterable<Integer> {
         while (current.next != null) {
             length++;
             num += current.data;
+            current = current.next;
         }
         return num / length;
     }
@@ -231,7 +246,8 @@ public class intlinkedlists implements Iterable<Integer> {
     }
     
     public int firstMax(){
-        return 1;
+        Node current = head;
+        return current.data;
         
     }
     public int lastMax(){
@@ -277,20 +293,25 @@ public class intlinkedlists implements Iterable<Integer> {
                 cnt++;
                 current = current.next;
             }
+            else{
             current = current.next;
+            }
         }
         return cnt;
     }
     public void killOdds(){
         Node current = head;
+        if(current == null){
+            return;
+        }
         while(current.next != null){
-            if(current.data % 2 == 1){
-                current=  null;
-                current = current.next;
-            }
+            if(current.next.data % 2 == 1){
+                current.next = current.next.next;
+            } else {
             current = current.next;
+
+            }
+            
         }
     }
 }
-
-// to do: rest of the methods in big linked list

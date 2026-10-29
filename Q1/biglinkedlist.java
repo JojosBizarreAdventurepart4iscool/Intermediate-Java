@@ -6,8 +6,9 @@ public class biglinkedlist {
             // to do: rest
         }
         list.print();
-        list.addLast(10);
-        list.print();
+        //list.getReverse();
+        //list.print();
+        
         System.out.println(list.getCount());
         System.out.println(list.isEmpty());
         System.out.println(list.isThere(0));
@@ -19,6 +20,18 @@ public class biglinkedlist {
         System.out.println(list.min());
         System.out.println(list.max());
         System.out.println(list.checkforNum(100));
-
+        System.out.println(list.getNum(3));
+        System.out.println(list.firstMax());
+        System.out.println(list.lastMax());
+        System.out.println(list.getEvenCount());
+        System.out.println(list.add(0, 1));
+        list.addLast(150);
+        list.removeFirst();
+        list.removeLast();
+        list.removeSpot(3);
+        list.iterator();
+        System.out.println();
+        list.killOdds();
+        list.print();
     }
 }

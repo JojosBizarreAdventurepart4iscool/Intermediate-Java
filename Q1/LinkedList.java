@@ -51,5 +51,33 @@ public class LinkedList<T extends Comparable<T>> {
         return old;
     }
 
-    //
+    public T get(int index){
+        Node current = head;
+        for(int x= 0; x < index; x++){
+            current = current.next;
+        }
+        return current.data;
+    }
+
+    public T set(int index, T element){
+        T old;
+        Node current = head;
+        for(int x = 0; x < index; x++){
+            current = current.next;
+        }
+        old = current.data;
+        current.data = element;
+        return old;
+    }
+        public void print(){
+        for(Node current = head; current != null; current = current.next)
+            System.out.println(current.data + " ");
+        System.out.println();
+    }
+    public int size(){
+        return size;
+    }
+    public boolean empty(){
+        return size == 0;
+    }
 }
