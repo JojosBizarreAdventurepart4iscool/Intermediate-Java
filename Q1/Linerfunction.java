@@ -1,34 +1,34 @@
-public class Linerfunction {
-    public class Line{
-        double slope;
-        double yInt;
+public class Linerfunction implements Linearfuctionsmethods{
+    double slope;
+    double yInt;
 
-        public Line(double slope, double yInt){
-            this.slope = slope;
-            this.yInt = yInt;
-        }
-    }
+public Linerfunction(double s , double y){
+  slope = s;
+  yInt = y;
+}
 
-    public double getSlope(){
-        Line l = new Line();
-        return 0;
-    }
-      public double getyInt(int y){
-    double yInt = y;
+  public double getSlope() {
+    return slope;
+  }
+
+  public double getYint() {
     return yInt;
   }
 
-  public double getRoot(double y, double s){
-    double root = y/s;
+  public double getRoot() {
+    yInt = yInt*-1;
+    double root = yInt/slope;
     return root;
   }
 
- // public double getXv(){
+   public double getXValue(double y){
+    double x = (y - yInt)/slope;
+    return x;
+   }
 
-  //}
-
-  //public double getYv(){
-
-  //}
+   public double getYValue(double x){
+    double y = (slope*x) + yInt;
+    return y;
+   }
 
 }
