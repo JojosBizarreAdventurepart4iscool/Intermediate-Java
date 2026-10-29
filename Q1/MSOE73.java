@@ -14,5 +14,6 @@ public class MSOE73 {
     }else{
         System.out.println("Error");
     }
+    input.close();
 }
 }

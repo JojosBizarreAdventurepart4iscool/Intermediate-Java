@@ -10,5 +10,6 @@ public class MSOE71 {
         double l2 = input.nextInt();
         double h2 = (h1/l1)*l2;
         System.out.println(h2);
+        input.close();
     }
 }

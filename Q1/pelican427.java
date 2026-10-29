@@ -1,6 +1,4 @@
-import java.io.*;
 import java.util.*;
-import java.text.*;
 
 public class pelican427 {
     public static void main(String[] args) {
