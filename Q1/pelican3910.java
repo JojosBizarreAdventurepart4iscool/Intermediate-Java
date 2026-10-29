@@ -1,4 +1,4 @@
-package Q1;
+
 import java.util.*;
 public class pelican3910 {
     public static void main(String[] args) {

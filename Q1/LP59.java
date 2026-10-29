@@ -1,4 +1,4 @@
-package Q1;
+
 public class LP59 {
     public static void main(String[] args) {
         System.out.println("x^1\t\tx^2\t\tx^3\t\tx^4\t\tx^5\t\t");

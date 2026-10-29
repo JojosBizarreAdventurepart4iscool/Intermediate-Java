@@ -1,4 +1,4 @@
-package Q1;
+
 public class modFib {
     public static void main(String[] args) {
 

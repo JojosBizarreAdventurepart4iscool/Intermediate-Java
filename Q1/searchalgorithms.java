@@ -1,4 +1,3 @@
-package Q1;
 
 public class searchalgorithms {
     public static <T extends Comparable<T>> int linearSearch(T[] arr, T target) {

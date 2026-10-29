@@ -1,4 +1,3 @@
-package Q1;
 
 public class pelican401 {
     public static void main(String[] args) {
