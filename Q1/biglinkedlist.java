@@ -1,14 +1,13 @@
 public class biglinkedlist {
     public static void main(String[] args) {
         var list = new intlinkedlists();
-        for (int x = 0; x < 200; x++) {
+        for (int x = 0; x < 201; x++) {
             list.addFront((int) (Math.random() * 100 + 1));
             // to do: rest
         }
         list.print();
-        //list.getReverse();
-        //list.print();
-        
+        var rlist = list.getReverse();
+        rlist.print();
         System.out.println(list.getCount());
         System.out.println(list.isEmpty());
         System.out.println(list.isThere(0));

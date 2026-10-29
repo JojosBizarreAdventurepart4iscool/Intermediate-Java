@@ -8,6 +8,7 @@ public class pelican427 {
         ArrayList<BankAccount> arrayList = new ArrayList<>();
         System.out.println("Please enter name: ");
         String name = input.next();
+        ListIterator a = arrayList.listIterator();
         while (!name.equals("EXIT")) {
             System.out.println("Enter how much to deposit: ");
             Double cash = input.nextDouble();

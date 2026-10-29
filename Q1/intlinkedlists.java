@@ -191,19 +191,14 @@ public class intlinkedlists implements Iterable<Integer> {
         return current.data;
     }
 
-    public void getReverse() {
+    public intlinkedlists getReverse() {
         Node current = head;
-        Node temp = head.next;
-        Node temp2 = temp.next;
-        current.next = null;
-        while(temp2 != null){
-            temp.next = current;
-            current = temp;
-            temp = temp2;
-            temp2 = temp2.next;
-            System.out.print(" ");
+        intlinkedlists reverse = new intlinkedlists();
+        while(current != null){
+            reverse.addFront(current.data);
+            current = current.next;
         }
-        head = temp;
+        return reverse;
 
     }
 

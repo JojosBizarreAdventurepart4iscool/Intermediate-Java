@@ -12,5 +12,6 @@ public class MSOE72 {
             }
         }
         System.out.println(cnt);
+        input.close();
     }
 }

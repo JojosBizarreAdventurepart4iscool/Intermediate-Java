@@ -1,5 +1,4 @@
 import java.util.*;
-import java.io.*;
 public class pelican378 {
   public static void main(String[] args) {
     Scanner reader = new Scanner(System.in);
@@ -22,5 +21,6 @@ public class pelican378 {
     double y = reader.nextDouble();
     double xValue = line.getXValue(y);
     System.out.println("The X value corresponding to Y = " + y + " is " + xValue);
+    reader.close();
   }  
 }

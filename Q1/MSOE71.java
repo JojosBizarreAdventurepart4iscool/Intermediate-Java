@@ -2,14 +2,13 @@ import java.util.Scanner;
 public class MSOE71 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter height of the first object: ");
-        int h1 = input.nextInt();
+        System.out.println("Enter Height of the first object: ");
+        double h1 = input.nextInt();
         System.out.println("Enter Length of first object's Shadow: ");
-        int l1 = input.nextInt();
-        System.out.println("Enter height of the Second object: ");
-        int h2 = input.nextInt();
+        double l1 = input.nextInt();
         System.out.println("Enter Length of Second object's Shadow: ");
-        int l2 = input.nextInt();
-        
+        double l2 = input.nextInt();
+        double h2 = (h1/l1)*l2;
+        System.out.println(h2);
     }
 }
