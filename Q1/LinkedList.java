@@ -26,10 +26,9 @@ public class LinkedList<T extends Comparable<T>> {
             head = node;
         }else{
             Node current = head;
-            while(current.next != null){
-                current = current.next;
+            while(current.next != null) current = current.next;
                 current.next = node;
-            }
+            
         }
         size++;
         return true;
@@ -40,8 +39,7 @@ public class LinkedList<T extends Comparable<T>> {
         if(index == 0){
             old = head.data;
             head= head.next;
-        }
-        else{
+        }else{
         Node current = head;
         for(int x = 0; x < index; x++)current = current.next;
             old = current.next.data;
@@ -69,15 +67,12 @@ public class LinkedList<T extends Comparable<T>> {
         current.data = element;
         return old;
     }
-    public void println() {
-        Node current = head;
-        while (current.next != null) {
-            System.out.print(current.data + " ");
-            current = current.next;
-        }
-        System.out.println(current.data);
+        public void print(){
+        for(Node current = head; current != null; current = current.next)
+            System.out.println(current.data + " ");
         System.out.println();
     }
+
     public int size(){
         return size;
     }
