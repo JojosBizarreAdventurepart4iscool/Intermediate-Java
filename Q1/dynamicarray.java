@@ -1,6 +1,6 @@
 
 import java.util.*;
-@SuppressWarnings({"unchecked", "unused", "rawTypes"})
+@SuppressWarnings({"unchecked", "rawTypes"})
 public class dynamicarray<T extends Comparable<T>> implements Iterable<T>{
     private T[] array;
     private int size;

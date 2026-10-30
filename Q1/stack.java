@@ -12,13 +12,13 @@ public class stack<T extends Comparable<T>> {
     }
     
     public void push(T element){
-        if(size == capacity) resize(2*capacity);
+        if(size == capacity) resize(2 * capacity);
         stack[size++] = element;
     }
 
     public T pop(){
         T element = stack[--size];
-        if(size==capacity/4) resize(capacity/2);
+        if(size == capacity/4) resize(capacity / 2);
         return element;
     }
 

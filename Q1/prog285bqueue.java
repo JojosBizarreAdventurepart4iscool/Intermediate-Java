@@ -17,7 +17,9 @@ public class prog285bqueue {
                 var sp = new Cl285b(id,c,s);
                 queue.enqueue(sp);
             }
+            
             file.close();
+
             while(!queue.isEmpty()){
                 var sp = queue.dequeue();
                 System.out.println(sp);

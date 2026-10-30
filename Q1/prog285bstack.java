@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class prog285bstack {
+
     public static void main(String[] args) {
         try {
             var file = new Scanner(new File("Langdat/prog285b.dat"));
@@ -16,9 +17,11 @@ public class prog285bstack {
 
                 var sp = new Cl285b(id,c,s);
                 stack.push(sp);
+            
             }
             file.close();
-            while(!stack.isEmpty()){
+
+            while(!stack.isEmpty()) {
                 var sp = stack.pop();
                 System.out.println(sp);
             }

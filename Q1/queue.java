@@ -10,7 +10,7 @@ public class queue<T extends Comparable<T>> {
         size = 0;
         front = 0;
         rear = 0;
-        capacity = 0;
+        capacity = 1;
         queue = (T[]) new Comparable[capacity];
 
     }
@@ -38,7 +38,7 @@ public class queue<T extends Comparable<T>> {
         if(newCapacity < 1) newCapacity = 1;
         var newQueue = (T[]) new Comparable[newCapacity];
         for(int x = 0; x < size; x++){
-            newQueue[x] = queue[(front +1) % capacity];
+            newQueue[x] = queue[(front + x) % capacity];
         } 
         queue = newQueue;
         capacity = newCapacity;
