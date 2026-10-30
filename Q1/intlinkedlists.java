@@ -258,13 +258,11 @@ public class intlinkedlists implements Iterable<Integer> {
         return max;
     }
     public void sort(){
-        Node temp = new Node(0);
         Node current = head;
         while(current.next != null){
             if(current.data > current.next.data){
-                temp = current;
                 current = current.next;
-                current.next = temp;
+                current.next = current;
             }
         }
     }

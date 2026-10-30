@@ -93,13 +93,14 @@ public class doublelylinkedlists<T extends Comparable<T>> implements Iterable<T>
     }
 
     public void addSorted(T element) {
-        //
-        //Node current = head;
-        //while(current.next != null){
-         //   if(current.data > current.next.data){
-                
-         //   }
-       // }
+        Node temp = new Node(null);
+        Node current = head;
+        while(current.next != null){
+            if(current.data.compareTo(current.next.data) > 0) {
+                current = current.next;
+                current.next = current;
+            }
+        }
     }
 
     public void remove(int index) {
