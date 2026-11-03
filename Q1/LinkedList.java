@@ -76,7 +76,7 @@ public class LinkedList<T extends Comparable<T>> {
     public int size(){
         return size;
     }
-    public boolean empty(){
+    public boolean isEmpty(){
         return size == 0;
     }
 }
