@@ -49,6 +49,7 @@ public class prog602bStack {
                 hours.pop();
                 priority.pop();
             }
+            file.close();
 
 
         } catch (IOException e) {
