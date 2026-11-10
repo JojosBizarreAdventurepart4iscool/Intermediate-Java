@@ -33,6 +33,4 @@ public class stack<T extends Comparable<T>> {
         stack = newStack;
         capacity = newCapacity;
     }
-
-
 }
