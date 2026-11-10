@@ -1,21 +1,23 @@
+import java.util.Queue;
+
 public class QueueStack {
 
-    public int id;
+    public int code;
     public int quant;
-    public double value;
-    public String input;
-    public int id2;
-    public int quant2;
     public double cost;
+    private QueueStack head;
+    private QueueStack next;
 
-    public void checkInput(){
-        if(input.equals("B")){
-            quant += quant2;
-            value += cost;
-        }
-        if(input.equals("S")){
-            quant -= quant2;
-            value -= cost;
-        }
+    public QueueStack(int id, int amount, double value){
+        code = id;
+        quant = amount;
+        cost = value;
+        next = null;
     }
-}
+    public void buy(int c, int q, double cost){
+      
+    }
+    public void sell(int c, int q){
+
+    }
+    }
