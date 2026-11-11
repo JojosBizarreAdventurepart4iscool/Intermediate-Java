@@ -13,16 +13,19 @@ public class prog1071h{
             while(list.hasNext()){
                 String input = list.next();
                 if(input.equals("B")){
-                    int code = list.nextInt;
-                    int quantity = list.nextInt;
-                    Double cost = list.nextDouble;
+                    int code = list.nextInt();
+                    int quantity = list.nextInt();
+                    Double cost = list.nextDouble();
                     id.buy(code, quantity, cost);
                 }
                 else{
-                    int code = list.nextInt;
-                    int quantity = list.nextInt;
+                    int code = list.nextInt();
+                    int quantity = list.nextInt();
                     id.sell(code,quantity);
                 }
+            }
+            for(int x = 0; x < 10; x++){
+                System.out.println(id.get(x));
             }
 
             
