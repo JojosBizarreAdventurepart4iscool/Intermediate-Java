@@ -16,16 +16,16 @@ public class prog1071h{
                     int code = list.nextInt();
                     int quantity = list.nextInt();
                     Double cost = list.nextDouble();
-                    id.buy(code, quantity, cost);
+                    id.get(code-1).buy(code, quantity, cost);
                 }
                 else{
                     int code = list.nextInt();
                     int quantity = list.nextInt();
-                    id.sell(code,quantity);
+                    id.get(code-1).sell(code,quantity);
                 }
             }
             for(int x = 0; x < 10; x++){
-                System.out.println(id.get(x));
+                System.out.println(id.get(x).peek());
             }
 
             
