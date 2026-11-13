@@ -13,13 +13,14 @@ public class QueueStackhelper {
         QueueStack temp = head;
         if(head == null) {
             head = current;
-        }
+        }else{
       while(temp.next != null){
         temp = temp.next;
       }
       temp.next = current;
       current.prev = temp;
     }
+  }
 
     public void sell(int c, int q){
         QueueStack temp = head;
@@ -36,18 +37,29 @@ public class QueueStackhelper {
           temp.quant = Math.abs(q);
           qZero = true;
         }
+        else{
         temp = temp.prev;
+        temp.next = null;
       }
+    }
     }
   }
 
+  public void printAll(){
+    QueueStack temp = head;
+    while(temp != null){
+      System.out.println(temp.code + " " + temp.quant + " " + temp.cost);
+      temp = temp.next;
+    }
+
+  }
+
     public String peek(){
-      
         QueueStack temp = head;
       while(temp.next != null){
         temp = temp.next;
       }
-      return temp.quant + " " + temp.cost;
+      return temp.code + " " + temp.quant + " " + temp.cost;
     }
     }
 

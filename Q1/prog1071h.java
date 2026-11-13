@@ -1,38 +1,38 @@
 import java.util.*;
 import java.io.*;
 
-public class prog1071h{
+public class prog1071h {
     public static void main(String[] args) {
-                try {
+        try {
             var beginning = new Scanner(new File("Langdat/bginvtry.txt"));
             var list = new Scanner(new File("Langdat/buysell.txt"));
-            ArrayList<QueueStack> id = new ArrayList<>(); 
+            ArrayList<QueueStackhelper> id = new ArrayList<>();
             while (beginning.hasNext()) {
-               id.add(new QueueStack(beginning.nextInt(), beginning.nextInt(), beginning.nextDouble()));
+                var q = new QueueStackhelper();
+                q.buy(beginning.nextInt(), beginning.nextInt(), beginning.nextDouble());
+                id.add(q);
+
             }
-            while(list.hasNext()){
+            while (list.hasNext()) {
                 String input = list.next();
-                if(input.equals("B")){
+                if (input.equals("B")) {
                     int code = list.nextInt();
                     int quantity = list.nextInt();
                     Double cost = list.nextDouble();
-                    id.get(code-1).buy(code, quantity, cost);
-                }
-                else{
+                    id.get(code - 1).buy(code, quantity, cost);
+                } else {
                     int code = list.nextInt();
                     int quantity = list.nextInt();
-                    id.get(code-1).sell(code,quantity);
+                    id.get(code - 1).sell(code, quantity);
                 }
-            }
-            for(int x = 0; x < 10; x++){
-                System.out.println(id.get(x).peek());
-            }
 
-            
-            
+            }
+                for (int x = 0; x < 10; x++) {
+                   id.get(x).printAll();
+                        System.out.println();
+                }
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
         }
     }
 }
-
