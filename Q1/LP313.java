@@ -18,6 +18,7 @@ public class LP313{
         double interestrate = input.nextDouble();
         double amount = principal * (1 + years * interestrate);
         return amount;
+        
     }
 
     public static double getPrincipal() {

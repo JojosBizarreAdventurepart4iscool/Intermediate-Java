@@ -53,7 +53,8 @@ public class MSOE78 {
                 }
             }
 
-
+file.close();
+Scanner.close();
 
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());

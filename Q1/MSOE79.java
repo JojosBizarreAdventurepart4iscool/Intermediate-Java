@@ -36,7 +36,8 @@ public class MSOE79 {
                 System.out.println( (x*width) + " - " + (x*width+width-1) + " " + arr[x]);
             
         }
-            
+            file.close();
+            input.close();
 
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
