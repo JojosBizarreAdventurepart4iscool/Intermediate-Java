@@ -49,9 +49,8 @@ public class CircularDequeue<T extends Comparable<T>> {
         if (this.isFull()) {
             System.out.println("Full");
         } else {
-            tail++;
-            this.buffer[this.tail] = value;
             this.tail = (this.tail + 1) % this.capacity;
+            this.buffer[this.tail] = value;
             size++;
         }
     }
@@ -64,7 +63,6 @@ public class CircularDequeue<T extends Comparable<T>> {
         if (this.isEmpty()) {
             System.out.println("Empty");
         } else {
-            head++;
             value = this.buffer[this.head];
             this.head = (this.head + 1) % this.capacity;
             this.size--;
@@ -80,9 +78,8 @@ public class CircularDequeue<T extends Comparable<T>> {
         if (this.isEmpty()) {
             System.out.println("Empty");
         } else {
-            tail++;
             value = this.buffer[this.head];
-            this.head = (this.head + 1) % this.capacity;
+            this.head = (this.head - 1) % this.capacity;
             this.size--;
         }
         return value;
@@ -113,5 +110,14 @@ public class CircularDequeue<T extends Comparable<T>> {
             System.out.print(this.buffer[temp]);
             temp++;
         }
+    }
+
+    public void deleteAll(){
+        for (int x = 0; x < capacity; x++) {
+        buffer[x] = null;
+    }
+    head = -1;
+    tail = -1;
+    size = 0;
     }
 }

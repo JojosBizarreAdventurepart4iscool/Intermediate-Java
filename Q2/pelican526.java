@@ -8,17 +8,24 @@ public class pelican526 {
             var file = new Scanner(new File("Langdat/Marquee.dat"));
             CircularDequeue<String> list = new CircularDequeue<>(1000);
 
-            int shift = file.nextInt();
-            String sequence = file.nextLine();
-            sequence = file.nextLine();
-            for (int x = 0; x < sequence.length(); x++) {
-                String[] arr = sequence.split("");
-                list.addFront(sequence);
-            }
             
+            while(file.hasNextLine()){
+            int shift = Integer.parseInt(file.nextLine());
+            String sequence = file.nextLine();
+            String[] arr = sequence.split("");
 
-            file.close();
-
+            for (int x = 0; x < sequence.length(); x++) {
+                list.addRear(sequence.substring(x,x+1));
+            }
+            for(int x = 0; x < shift-1; x++){
+                list.addRear(sequence.substring(x,x+1));
+                list.deleteFront();
+            }
+            list.deleteFront();
+            list.print40();
+            System.out.println();
+            list.deleteAll();
+        }
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
         }
